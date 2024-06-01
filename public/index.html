@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Portfolio-Faizan Khan</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- style css file -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- fontawesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+  <!-- google fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+</head>
+
+<body>
+
+  <!-- navbar section -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="brand-and-toggler">
+        <a href="index.html" class="navbar-brand">faizan</a>
+        <button type="button" class="navbar-toggler" id="navbar-toggler">
+          <span>
+            <i class="fas fa-bars"></i>
+          </span>
+        </button>
+      </div>
+
+      <div class="navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item nav-active">
+            <a href="#home" class="nav-link">home</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#projects" class="nav-link">projects</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#skills" class="nav-link">skills</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">contact</a>
+          </li>
+          <li class="nav-item">
+            <img id="icon" src="assets/sun.png" alt="...." onclick="chagemyphoto()">
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- end of navbar section -->
+
+  <!-- home page -->
+  <section class="home container" id="home">
+    <div class="row">
+      <div class="row-left">
+        <h3>hello!</h3>
+        <h1>i'm <span> faizan khan</span></h1>
+        <h2>web developer</h2>
+        <div class="home-pg-btn">
+          <button type="button" class="btn" onclick="toggleBackgroundAndScrollHireme()">hire me</button>
+          <button type="button" class="btn" onclick="toggleBackgroundAndScroll()">my works </button>
+        </div>
+      </div>
+
+      <div class="row-right">
+        <div class="img-border">
+          <div class="img-container">
+            <img id="toggle-img" src="assets/my-photo.jpg" alt="my photo">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end of home page -->
+  <!-- projects page -->
+  <section class="projects container" id="projects">
+    <div class="title">
+      <h2>projects</h2>
+    </div>
+    <p class="text">Projects benefit web developers by enhancing skills through new technologies, building a robust
+      portfolio, improving problem-solving abilities, demonstrating expertise for professional growth, and expanding
+      networks through collaboration</p>
+
+    <div class="row">
+      <div class="item">
+        <div class="item-overlay">
+          <a href="#" class="project-link" data-modal-target="modal1">Textutils-React App</a>
+          <h3>web app</h3>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-overlay">
+          <a href="#" class="project-link" data-modal-target="modal2">NewsMonkey-React App</a>
+          <h3>web app</h3>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-overlay">
+          <a href="#" class="project-link" data-modal-target="modal3">MyOnlineMeal</a>
+          <h3>web </h3>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-overlay">
+          <a href="#" class="project-link" data-modal-target="modal4">Spotify Clone</a>
+          <h3>web </h3>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+  <!-- end of projects page -->
+  <!-- Modal for project 1 -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>TextUtils React-App</h2>
+      <p>Textutils is a powerful and versatile React application designed to provide a suite of text manipulation tools.
+        This application is ideal for individuals who frequently work with text, including writers, students,
+        developers, and professionals. Textutils enhances productivity by simplifying common text-related tasks and
+        providing instant, accurate results..</p>
+
+      <h3>Features:</h3>
+      <ul>
+        <h4>Text Transformation:</h4>
+        <li class="modal-li-text"> <b>1. Real-time Updates:</b> See changes to your text in real-time as you apply different operations.</li>
+        <li class="modal-li-text"><b>2. Responsive Design:</b> The application works seamlessly on various devices, including desktops,
+          tablets, and mobile phones.</li>
+
+        <li class="modal-li-text"><b>3. Dark Mode:</b> Switch between light and dark themes for a comfortable user experience in different
+          lighting conditions.</li>
+      </ul>
+      <ul>
+        <h4>Text Analysis:</h4>
+        <li class="modal-li-text"> <b>1. Word Count:</b> Calculates the number of words in a text string.</li>
+        <li class="modal-li-text"><b>2. Character Count:</b> Determines the total number of characters in a text string, optionally including
+          or excluding spaces.</li>
+        <li class="modal-li-text"><b>3. Read Time Estimate:</b> Estimates the time required to read the text based on the average reading
+          speed.</li>
+
+      </ul>
+      <ul>
+
+        <h4>Text Manipulation:</h4>
+        <li class="modal-li-text"> <b>1. Remove Extra Spaces:</b> Eliminates unnecessary spaces between words.</li>
+        <li class="modal-li-text"><b>2. Copy to Clipboard:</b> Copies the processed text to the clipboard with a single click.</li>
+        <li class="modal-li-text"><b>3. Clear Text:</b> Clears the input text area to start afresh.</li>
+
+      </ul>
+    </div>
+  </div>
+
+  <!-- Modal for project 2 -->
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>NewsMonkey React-App</h2>
+      <p>NewsMonkey is an innovative React application designed to provide users with up-to-date news articles from
+        various sources. It serves as a centralized platform for accessing diverse news content conveniently. With
+        NewsMonkey, users can stay informed about current events, trending topics, and breaking news across different
+        categories and regions.</p>
+
+      <h3>Features:</h3>
+      <ul>
+        <h4>News Aggregation:</h4>
+        <li class="modal-li-text"><b>1. Multiple Sources:</b> Integrates news articles from a wide range of sources, including reputable
+          publishers and news outlets.</li>
+        <li class="modal-li-text"><b>2. Categorized Content:</b> Organizes news articles into categories such as politics, sports, technology,
+          and more for easy navigation.</li>
+
+        <li class="modal-li-text"><b>3. Personalized Feeds:</b> Allows users to customize their news feeds based on their interests and
+          preferences.</li>
+      </ul>
+      <ul>
+
+        <h4>Responsive Design:</h4>
+        <li class="modal-li-text"><b>1. Mobile Compatibility:</b> Designed to be responsive, ensuring seamless access to news content on
+          smartphones and tablets.</li>
+        <li class="modal-li-text"></li><b>2. Adaptive Layout:</b> Adapts to different screen sizes and orientations, optimizing the user experience
+          across devices.</li>
+
+      </ul>
+
+      <ul>
+        <h4>Technology Stack::</h4>
+        <li class="modal-li-text"><b>1. Frontend:</b> React.js for building a dynamic and interactive user interface.</li>
+        <li class="modal-li-text"><b>2. Styling:</b> CSS3, Bootstrap for responsive design and modern aesthetics.</li>
+        <li class="modal-li-text"><b>3. API Integration:</b> Utilizes news APIs (such as NewsAPI) to fetch and display news content
+          dynamically.</li>
+      </ul>
+
+    </div>
+  </div>
+
+  <!-- Modal for project 3 -->
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>MyOnlineMeal Website</h2>
+      <p>MyOnlineMeal is a website dedicated to offering online food delivery services in Karachi. It provides a
+        platform for customers to order their favorite meals conveniently from the comfort of their homes.</p>
+
+      <h3>Overview:</h3>
+      <ul>
+
+        <li class="modal-li-text"><b>1. Navigation:</b> The navigation bar at the top provides easy access to different sections of the
+          website, including Home, About Us, Services, and Contact Us.</li>
+        <li class="modal-li-text"><b>2. Home Section:</b> The home section welcomes visitors with a title and introductory text, inviting them
+          to explore the website further. A prominent "Order Now" button encourages immediate action.</li>
+        <li class="modal-li-text"><b>3. Services Section:</b> The services section highlights the key offerings of MyOnlineMeal, including
+          food ordering, catering, and bulk ordering. Each service is accompanied by a brief description and an
+          illustrative image.</li>
+        <li class="modal-li-text"><b>4. Clients Section:</b> The clients section showcases some of the notable clients or partners of
+          MyOnlineMeal, adding credibility to the brand.</li>
+        <li class="modal-li-text"><b>5. Contact Section:</b> The contact section provides a form for visitors to get in touch with
+          MyOnlineMeal. It includes fields for name, email, phone number, and a message box for inquiries or feedback.
+        </li>
+        <li class="modal-li-text"><b>6. Footer:</b> The footer contains copyright information and serves as a consistent element across all
+          pages of the website.</li>
+      </ul>
+
+      <h3>Technologies Used:</h3>
+      <ul>
+
+        <li class="modal-li-text"><b>1. HTML:</b> Markup language for structuring the content of the website.</li>
+        <li class="modal-li-text"><b>2. CSS:</b> Styling language used to enhance the visual presentation and layout of the website.</li>
+        <li class="modal-li-text"><b>3. Google Fonts:</b> External font library utilized to improve typography aesthetics.</li>
+      </ul>
+    </div>
+  </div>
+  <!-- Modal for project 4 -->
+  <div id="modal4" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Spotify Clone Website</h2>
+      <p>The Spotify Music Player Web Page is a simple yet functional web page designed to mimic the user interface of
+        the popular music streaming service, Spotify. It provides users with a list of songs from the "Best of NCS - No
+        Copyright Sounds" playlist and allows them to play, pause, and skip songs using interactive controls.</p>
+
+      <h3>Overview:</h3>
+      <ul>
+        <h4>Key Elements::</h4>
+        <li class="modal-li-text"><b>1. Navigation:</b> The navigation bar includes the Spotify logo and menu items for Home and About pages.
+        </li>
+        <li class="modal-li-text"><b>2. Song List:</b> The song list section displays a collection of songs from the "Best of NCS" playlist.
+          Each song item includes an image, song name, and a play button.
+        </li>
+        <li class="modal-li-text"><b>3. Player Controls:</b> The bottom section of the page contains player controls, including a progress
+          bar, playback buttons (previous, play/pause, next), and song information display.</li>
+      </ul>
+
+      <ul>
+        <h4>Functionality:</h4>
+        <li class="modal-li-text"><b>1. Play/Pause:</b> Users can click on the play/pause button to toggle between playing and pausing the
+          currently selected song.</li>
+        <li class="modal-li-text"><b>2. Skip Songs:</b> Users can navigate to the previous or next song in the playlist by clicking on the
+          corresponding buttons.</li>
+        <li class="modal-li-text"><b>3. Progress Bar:</b> The progress bar indicates the current position of the song and allows users to seek
+          to a specific point in the track.</li>
+      </ul>
+
+      <ul>
+        <h4>Technologies Used:</h4>
+        <li class="modal-li-text"><b>1. Frontend:</b> Markup language for structuring the content of the web page.</li>
+        <li class="modal-li-text"><b>2. CSS:</b> Styling language used to enhance the visual presentation and layout of the page.</li>
+        <li class="modal-li-text"><b>3. JavaScript:</b> </li>
+      </ul>
+
+    </div>
+  </div>
+  </div>
+
+  <!-- skills page -->
+  <section class="skills container" id="skills">
+    <div class="title">
+      <h2>skills</h2>
+    </div>
+
+    <p class="text">Skills benefit web developers by enhancing problem-solving abilities, increasing employability,
+      enabling effective collaboration, fostering adaptability to new technologies, and driving continuous personal and
+      professional growth.</p>
+
+    <div class="row">
+
+
+      <div class="item">
+        <div class="item-text">
+          <span>HTML5</span>
+          <span class="w-85">85%</span>
+        </div>
+        <div class="progress">
+          <div class="progress-bar w-85"></div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-text">
+          <span>CSS3</span>
+          <span class="w-80">80%</span>
+        </div>
+        <div class="progress">
+          <div class="progress-bar w-80"></div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-text">
+          <span>JavaScript</span>
+          <span class="w-60">60%</span>
+        </div>
+        <div class="progress">
+          <div class="progress-bar w-60"></div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-text">
+          <span>React JS</span>
+          <span class="w-68">40%</span>
+        </div>
+        <div class="progress">
+          <div class="progress-bar w-40"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end of skills page -->
+
+  <!-- contact page -->
+  <section class="contact container" id="contact">
+    <div class="title">
+      <h2>contact</h2>
+    </div>
+
+    <p class="text">Contacts are invaluable for web developers as they facilitate networking, collaboration, mentorship,
+      and career opportunities. Building a strong network enables access to resources, advice, and support, fosters
+      professional growth, and opens doors to new projects and clients</p>
+
+    <div class="row">
+      <div class="col-left">
+        <h2>feel free to ask me!</h2>
+        <p class="text">
+          Feel free to ask any questions you have about the product or service you're interested in.</p>
+
+        <div class="contact-info">
+          <span><i class="fas fa-envelope-open"></i></span>
+          <h3>
+            <span class="text">mail me</span> <br>
+            fk01817@gmail.com
+          </h3>
+        </div>
+
+        <div class="contact-info">
+          <span><i class="fas fa-phone-square-alt"></i></span>
+          <h3>
+            <span class="text">call me</span> <br>
+            + 92 315 244 6775
+          </h3>
+        </div>
+
+        <div class="contact-social-links">
+          <a href="#">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-right">
+        <form class="contact-form" id="contact1">
+          <div class="form-group">
+            <input class="text-area" type="text" placeholder="your name" id="name">
+            <input class="text-area" type="email" placeholder="your email" id="email">
+            <input class="text-area" type="number" placeholder="your contact no" id="number">
+          </div>
+          <textarea rows="5" class="text-area" id="text" placeholder="send message "></textarea>
+          <button type="submit" class="btn">send message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- end of contact page -->
+
+
+  <!-- footer -->
+  <footer class="footer container">
+    <div class="footer-text">
+      <p class="text">Copyright &copy; 2024 All rights reserved</p>
+    </div>
+  </footer>
+  <!-- end of footer -->
+
+
+  <!-- custom js file -->
+  <script src="js/script.js"></script>
+  <!-- Firebase Link -->
+</body>
+
+</html>
